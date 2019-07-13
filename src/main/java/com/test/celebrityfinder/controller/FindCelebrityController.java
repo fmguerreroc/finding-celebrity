@@ -25,7 +25,7 @@ public class FindCelebrityController {
    }
 
    private CelebritySearchResponseDTO getCelebrityResponse(final CelebrityFinder celebrityFinder) {
-      long startTime = System.currentTimeMillis();
+      final long startTime = System.currentTimeMillis();
       CelebritySearchResponseDTO.CelebritySearchResponseDTOBuilder celebritySearchResponseDTOBuilder =
             CelebritySearchResponseDTO.builder();
       try {

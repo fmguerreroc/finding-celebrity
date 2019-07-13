@@ -10,9 +10,11 @@ public final class CelebrityValidationUtils {
 
    private CelebrityValidationUtils(){}
 
-   public static final Predicate<Person> DOES_KNOW_ANYBODY = person -> person.getKnowns().isEmpty()
-         || (person.getKnowns().size() == 1 && person.getKnowns().contains(person));
-   private static final BiPredicate<Person, Person> IS_CELEBRITY_CANDIDATE =
+   public static final Predicate<Person> DOES_KNOW_ANYBODY =
+         person -> person.getKnowns().isEmpty()
+         || (person.getKnowns().size() == 1
+         && person.getKnowns().iterator().next().getId().compareTo(person.getId()) == 0);
+   private static final BiPredicate<Person, Person> ARE_TE_SAME_PERSON =
          (celebrityCandidate, assertionTarget) ->
                celebrityCandidate.getId().compareTo(assertionTarget.getId()) == 0;
 
@@ -20,10 +22,11 @@ public final class CelebrityValidationUtils {
       return teamMembers.stream()
             .filter(
                   teamMember ->
-                        IS_CELEBRITY_CANDIDATE.negate()
+                        ARE_TE_SAME_PERSON.negate()
                         .test(celebrityCandidate, teamMember))
             .allMatch(person ->
                   person.getKnowns()
-                  .contains(celebrityCandidate));
+                        .stream()
+                        .anyMatch(p -> ARE_TE_SAME_PERSON.test(p, celebrityCandidate)));
    }
 }

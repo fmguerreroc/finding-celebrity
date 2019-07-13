@@ -13,11 +13,13 @@ import java.math.BigInteger;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
 @Table(name = "person")
 @Entity
+@Builder
 public class Person {
 
    @Id

@@ -30,13 +30,4 @@ public class TeamCelebrityProcessorService implements CelebrityFinder {
       }
    }
 
-   private Person lookForCelebrityByBackEndProcessing(final List<Person> teamMembers) throws CelebrityNotFoundException {
-      return teamMembers.stream()
-            .filter(CelebrityValidationUtils.DOES_KNOW_ANYBODY)
-            .filter(celebrityCandidate ->
-                  CelebrityValidationUtils.everyBodyKnowsHim(celebrityCandidate, teamMembers))
-            .findFirst()
-            .orElseThrow(CelebrityNotFoundException::new);
-   }
-
 }

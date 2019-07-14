@@ -28,9 +28,9 @@ Data storage layer is based on a relational database, so i decided to implement 
 
 - Invoking the solution:
 You can invoke the solution with the browser using these endpoints:
-for back-end processing: *http://localhost:8080/get-celebrity-by-backend-processing*
 
-for database processing: http://localhost:8080/get-celebrity-by-database-processing
+1. for back-end processing: *http://localhost:8080/get-celebrity-by-backend-processing*
+2. for database processing: http://localhost:8080/get-celebrity-by-database-processing
 
 - Data model:
 You can find the ER diagram below.

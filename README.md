@@ -34,6 +34,8 @@ You can invoke the solution with the browser using these endpoints:
 
 - Data model:
 You can find the ER diagram below.
+
+
 ![image](https://user-images.githubusercontent.com/12778024/61179057-592dfa00-a5c0-11e9-99d6-62e3e861b0cc.png)
 
 - Understanding the response object:

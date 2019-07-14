@@ -1,7 +1,6 @@
 package com.test.celebrityfinder.dataprovider.repository;
 
 import java.math.BigInteger;
-import java.util.List;
 import java.util.Optional;
 
 import com.test.celebrityfinder.dataprovider.entity.Person;

@@ -1,6 +1,5 @@
 package com.test.celebrityfinder.dataprovider.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,13 +12,19 @@ import java.math.BigInteger;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Table(name = "person")
 @Entity
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
 public class Person {
 
    @Id
@@ -33,7 +38,7 @@ public class Person {
    private String lastName;
 
    @JsonIgnore
-   @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+   @ManyToMany(fetch = FetchType.LAZY)
    @JoinTable(name = "relationship",
    joinColumns = {@JoinColumn(name = "owner_id")},
    inverseJoinColumns = {@JoinColumn(name = "target_id")})

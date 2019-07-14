@@ -10,7 +10,7 @@ In a team of n people, a celebrity is known by everyone but he/she doesn't know 
 - DataSource type: H2 in-memory database.
 
 - Prerequisites to run:
-Java 1.8 virtual machine, gradle 4.7 or compatible, bin of both added to the system path.
+Java 1.8 virtual machine, gradle 4.7 or compatible and bin folder of both tools added to the system path.
 
 - Additional recommendations:
 In case you want to run the project from your IDE please allow annotation processing and install the lombok pluggin to avoid false issues.

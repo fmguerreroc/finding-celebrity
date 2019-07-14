@@ -24,7 +24,7 @@ To execute the artifact please go to the artifact folder location and execute th
 There are data preloaded but you can add new data using this console.
 
 - Solution description: 
-Data storage layer is based on a relational database inside a schema, so i decided to implement the solution in two different ways: 1. Executing the search using backend classes developed for this purpose 2. Executing the search using the database engine via custom JPQL query.
+Data storage layer is based on a relational database, so i decided to implement the solution in two different ways: 1. Executing the search using backend classes developed for this purpose 2. Executing the search using the database engine via custom JPQL query.
 
 - Invoking the solution:
 You can invoke the solution with the browser using these endpoints:

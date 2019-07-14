@@ -17,16 +17,16 @@ To build the artifact just open a system console and navigate inside the project
 
 - Executing artifact:
 To execute the artifact please go to the artifact folder location and execute the command: *java -jar celebrity-finder-0.0.1-SNAPSHOT.jar* this will startup a tomcat instance with our SpringBoot application, so please be sure that port 8080 not be busy to avoid startup failures. With this instance also gonna be up an H2 database. Please use your browser to access database console via this url: *http://localhost:8080/h2-console* use the below connection config.
-jdbc url: *jdbc:h2:mem:celebrity_finder_db* 
-user: user
-password: password
+1. jdbc url: *jdbc:h2:mem:celebrity_finder_db* 
+2. user: user
+3. password: password
 
 There are data preloaded but you can add new data using this console.
 
 - Solution description: 
 Data storing layer is based on a relational database inside a schema, so i decided to implement the solution in two different ways: 1. Executing the search using backend classes developed for this purpose 2. Executing the search using the database engine via custom JPQL query.
 
--Invoking the solution:
+- Invoking the solution:
 You can invoke the solution with the browser using these endpoints:
 for back-end processing: *http://localhost:8080/get-celebrity-by-backend-processing*
 

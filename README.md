@@ -1,4 +1,4 @@
-### **Find Celebrity Problem**
+### **Find Celebrity Challenge**
 
 - Problem description:
 In a team of n people, a celebrity is known by everyone but he/she doesn't know anybody. Find the celebrity!!
@@ -10,16 +10,21 @@ In a team of n people, a celebrity is known by everyone but he/she doesn't know 
 - DataSource type: H2 in-memory database.
 
 - Prerequisites to run:
-Java 1.8 virtual machine, gradle 4.7 or compatible, bin of both added to the system path.
+Java 1.8 virtual machine, gradle 4.7 or compatible and bin folder of both tools added to the system path.
+
+- Additional recommendations:
+In case you want to run the project from your IDE please allow annotation processing and install the lombok pluggin to avoid false issues.
 
 - Building artifact: 
 To build the artifact just open a system console and navigate inside the project folder, once there execute the command: *gradle clean build*  . This gonna compile the project, run the unit tests and generate the artifact. This artifact will be located inside de "build/libs" directory into the project folder.
 
 - Executing artifact:
 To execute the artifact please go to the artifact folder location and execute the command: *java -jar celebrity-finder-0.0.1-SNAPSHOT.jar* this will startup a tomcat instance with our SpringBoot application, so please be sure that port 8080 not be busy to avoid startup failures. With this instance also gonna be up an H2 database. Please use your browser to access database console via this url: *http://localhost:8080/h2-console* use the below connection config.
-1. jdbc url: *jdbc:h2:mem:celebrity_finder_db* 
-2. user: user
-3. password: password
+
+1. Driver class name: org.h2.Driver
+2. jdbc url: *jdbc:h2:mem:celebrity_finder_db* 
+3. user: user
+4. password: password
 
 There are data preloaded but you can add new data using this console.
 

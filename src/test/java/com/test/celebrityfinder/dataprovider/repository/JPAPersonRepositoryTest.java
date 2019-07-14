@@ -23,6 +23,7 @@ public class JPAPersonRepositoryTest {
 
    @Before
    public void setup(){
+      jpaPersonRepository.deleteAll();
       jpaPersonRepository.saveAll(DataPreparationUtil.getEmptyMembers());
    }
 

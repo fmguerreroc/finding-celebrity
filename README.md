@@ -12,6 +12,9 @@ In a team of n people, a celebrity is known by everyone but he/she doesn't know 
 - Prerequisites to run:
 Java 1.8 virtual machine, gradle 4.7 or compatible, bin of both added to the system path.
 
+- Additional recommendations:
+In case you want to run the project from your IDE please allow annotation processing and install the lombok pluggin to avoid false issues.
+
 - Building artifact: 
 To build the artifact just open a system console and navigate inside the project folder, once there execute the command: *gradle clean build*  . This gonna compile the project, run the unit tests and generate the artifact. This artifact will be located inside de "build/libs" directory into the project folder.
 

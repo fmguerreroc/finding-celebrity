@@ -14,7 +14,7 @@ public final class CelebrityValidationUtils {
          person -> person.getKnowns().isEmpty()
          || (person.getKnowns().size() == 1
          && person.getKnowns().iterator().next().getId().compareTo(person.getId()) == 0);
-   private static final BiPredicate<Person, Person> ARE_TE_SAME_PERSON =
+   private static final BiPredicate<Person, Person> ARE_THE_SAME_PERSON =
          (celebrityCandidate, assertionTarget) ->
                celebrityCandidate.getId().compareTo(assertionTarget.getId()) == 0;
 
@@ -22,11 +22,11 @@ public final class CelebrityValidationUtils {
       return teamMembers.stream()
             .filter(
                   teamMember ->
-                        ARE_TE_SAME_PERSON.negate()
+                        ARE_THE_SAME_PERSON.negate()
                         .test(celebrityCandidate, teamMember))
             .allMatch(person ->
                   person.getKnowns()
                         .stream()
-                        .anyMatch(p -> ARE_TE_SAME_PERSON.test(p, celebrityCandidate)));
+                        .anyMatch(p -> ARE_THE_SAME_PERSON.test(p, celebrityCandidate)));
    }
 }

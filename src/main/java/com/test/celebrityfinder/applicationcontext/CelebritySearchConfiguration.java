@@ -1,8 +1,7 @@
 package com.test.celebrityfinder.applicationcontext;
 
-import com.test.celebrityfinder.abstraction.Processor;
-import com.test.celebrityfinder.dataprovider.repository.JPAPersonRepository;
 import com.test.celebrityfinder.abstraction.CelebrityFinder;
+import com.test.celebrityfinder.dataprovider.repository.JPAPersonRepository;
 import com.test.celebrityfinder.processing.ByBackEndProcessor;
 import com.test.celebrityfinder.processing.ByDatabaseProcessor;
 import com.test.celebrityfinder.service.TeamCelebrityProcessorService;
